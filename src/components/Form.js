@@ -1,28 +1,10 @@
-import { Router, Routes, Route } from 'react-router';
-import './App.css';
-import Signup from './page/Signup';
-import Login from './page/Login';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Form from './components/Form';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-function App() {
+const Form = () => {
   const [view, setview] = useState(false);
+
   return (
-    <div className='container'>
-      {/* <Router>
-        <Routes>
-          <Route path='/' element={<Signup />} />
-          <Route path='/login' element={<Login />} />
-        </Routes>
-      </Router> */}{' '}
-      <div className='header'>
-        <div className='logo'>Tegalchain.</div>
-        <div className='signUp'>
-          <div className='btn'>SIGN UP</div>
-        </div>
-      </div>
+    <div>
       <div className='form'>
         <h1>Log In to Tegalchain</h1>
         <form>
@@ -80,11 +62,8 @@ function App() {
           <button className='btn'>PROCEED</button>
         </form>
       </div>
-      <div className='footer'>
-        <p>© 2021. - 2025 All Rights Reserved. Tegalchain</p>
-      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default Form;

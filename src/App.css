@@ -1,38 +1,210 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*========== VARIABLE CSS ==========*/
+:root {
+  --header-height: 3.5rem;
+
+  /*======= Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --text-color: #616161;
+  --color-primary: hsl(355, 66%, 50%);
+  --white-color: hsl(355, 4%, 15%);
+  --black-color: #212121;
+  --light-border: #e0e0e0;
+  --white: #ffffff;
+  --black: #000000;
+
+  /*======= Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  display: flex;
+  color: var(--black-color);
+  width: 100%;
+  height: var(--header-height);
+  padding: 20px;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  flex: 1;
+  font-size: large;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.signUp {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  border: 1px solid var(--black-color);
+  padding: 11px 24px;
+  cursor: pointer;
+}
+
+.form {
+  border: 1px solid var(--light-border);
+  width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  box-shadow: 0px 82px 40px -14px rgba(100, 100, 100, 0.0784314);
+  background-color: var(--white);
+}
+
+.form h1 {
+  color: var(--black-color);
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.form .email,
+.form .password {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .email label,
+.form .password label {
+  margin: 0 0 -30px 20px;
+  font-size: 14px;
+  z-index: 100;
+}
+
+.form .email input,
+.form .password input {
+  width: 380px;
+  height: 50px;
+  border: 1px solid var(--light-border);
+  position: relative;
+  margin-bottom: 40px;
+  padding: 25px 45px 0 25px;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+.form .email input:focus,
+.form .password input:focus {
+  border: 1px solid var(--black-color);
+}
+
+.form .password {
+  position: relative;
+}
+
+.form .password .icon {
+  width: 25px;
+  height: 25px;
+  z-index: 100;
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.form .checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form .checkbox input {
+  flex: 1;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: 0;
+  align-items: left;
+  margin-left: -10px;
+}
+
+.form .checkbox p {
+  text-align: right;
+}
+
+.form label,
+.form p {
+  flex: 4;
+  cursor: pointer;
+}
+
+.form .btn {
+  width: 100%;
+  height: 68px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  position: relative;
+  margin-bottom: 80px;
+  padding: 20px;
+  font-size: large;
+}
+
+.footer {
+  width: 90%;
+  align-items: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 0px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form {
+    width: 120%;
+    margin-top: 28x;
+  }
+
+  .form .email input,
+  .form .password input {
+    width: 280px;
+    height: 50px;
+    border: 1px solid var(--light-border);
+    position: relative;
+    margin-bottom: 40px;
+    padding: 25px 45px 0 25px;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--text-color);
+  }
+
+  .form .checkbox input {
+    margin-left: 0px;
+  }
+
+  .form .password .icon {
+    right: 24px;
   }
 }
