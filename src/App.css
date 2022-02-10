@@ -104,7 +104,7 @@
 
 .form .email input:focus,
 .form .password input:focus {
-  border: 1px solid var(--black-color);
+  outline: 1px solid var(--black-color);
 }
 
 .form .password {

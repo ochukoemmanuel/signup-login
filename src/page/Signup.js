@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import Header from '../components/Header';
 
 const Signup = () => {
   const [view, setview] = useState(false);
 
   return (
     <div>
+      <div className='header'>
+        <div className='logo'>Tegalchain.</div>
+        <div className='signUp'>
+          <div className='btn'>SIGN UP</div>
+        </div>
+      </div>
       <div className='form'>
         <h1>Log In to Tegalchain</h1>
         <form>
@@ -57,10 +64,13 @@ const Signup = () => {
           <div className='checkbox'>
             <input type='checkbox' />
             <label htmlFor='checkbox'>Remember Me</label>
-            <p>Forget Password?</p>
+            <p>Forget password?</p>
           </div>
           <button className='btn'>PROCEED</button>
         </form>
+      </div>
+      <div className='footer'>
+        <p>© 2021. - 2025 All Rights Reserved. Tegalchain</p>
       </div>
     </div>
   );
